@@ -1,0 +1,2 @@
+const useLoginOrRegister = () => {};
+export { useLoginOrRegister };

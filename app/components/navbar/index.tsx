@@ -1,17 +1,22 @@
+import Link from "next/link";
 import { Container } from "../container";
 import { Logo } from "./logo";
 import { SearchBar } from "./search";
+import { UserMenu } from "./userMenu";
 
 export const Navbar = () => {
   return (
-    <nav className="fixed w-full bg-white z-10 shadow-sm">
-      <div className="py-4 border-b-[1px]">
-        <Container>
-          <div className="flex flex-row items-center justify-between gap-3 md:gap-0">
-            <Logo />
-            <SearchBar />
-          </div>
-        </Container>
+    <nav className="navbar px-4 fixed w-full bg-base-100 z-10 shadow-sm">
+      <div className="flex-1">
+        <Link href={"/"}>
+          <Logo />
+        </Link>
+      </div>
+      <div className="navbar-center">
+        <SearchBar />
+      </div>
+      <div className="navbar-end">
+        <UserMenu />
       </div>
     </nav>
   );

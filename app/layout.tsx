@@ -1,6 +1,7 @@
 import { Navbar } from "./components/navbar";
 import "./globals.css";
 import { Nunito } from "next/font/google";
+import { QueryWrapper } from "./wrappers/queryProviderWrapper";
 export const metadata = {
   title: "Airbnb",
   description: "Airbnb clone",
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={nunitoFont.className}>
         <Navbar />
-        {children}
+        <QueryWrapper>{children}</QueryWrapper>
       </body>
     </html>
   );
