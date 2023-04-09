@@ -3,6 +3,7 @@
 import { SearchItem } from "./searchItem";
 import { BiSearch } from "react-icons/bi";
 export const SearchBar = () => {
+  
   return (
     <ul className="list-none flex flex-row items-center shadow-sm rounded-full">
       <SearchItem searchBy="anywhere" />
